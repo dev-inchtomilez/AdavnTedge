@@ -52,7 +52,7 @@ const serviceCategories = [
     description: 'SEO, PPC, social media & growth'
   },
   { 
-    name: 'Content Strategy', 
+    name: 'AI Marketing Solutions', 
     path: '/services/content-strategy',
     icon: <MonitorSmartphone className="w-4 h-4" />,
     description: 'Content creation & distribution'
