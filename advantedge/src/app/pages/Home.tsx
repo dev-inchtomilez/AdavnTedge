@@ -1694,6 +1694,1845 @@ export function HomePage() {
 
 
 
+{/* ============================================
+    1. HOME MEGA HERO
+    SINGLE BLACK GLASS LUXURY EXPERIENCE
+    ============================================ */}
+
+<section
+  aria-labelledby="home-hero-title"
+  className="
+    adv-luxury-home-hero
+    relative
+    isolate
+    min-h-[calc(100svh-72px)]
+    w-full
+    overflow-hidden
+    bg-[#050611]
+  "
+>
+  {/* ============================================
+      SELF-CONTAINED HERO CSS
+      ============================================ */}
+
+  <style>
+    {`
+      /* ==========================================
+         BACKGROUND SLIDES
+         ========================================== */
+
+      .adv-luxury-home-hero .adv-lux-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transform: scale(1.055);
+        animation: advLuxBg 32s ease-in-out infinite;
+        animation-fill-mode: both;
+        will-change: opacity, transform;
+      }
+
+      .adv-luxury-home-hero .adv-lux-bg-1 {
+        animation-delay: 0s;
+      }
+
+      .adv-luxury-home-hero .adv-lux-bg-2 {
+        animation-delay: 8s;
+      }
+
+      .adv-luxury-home-hero .adv-lux-bg-3 {
+        animation-delay: 16s;
+      }
+
+      .adv-luxury-home-hero .adv-lux-bg-4 {
+        animation-delay: 24s;
+      }
+
+      @keyframes advLuxBg {
+        0% {
+          opacity: 0;
+          transform: scale(1.055);
+        }
+
+        5% {
+          opacity: 1;
+        }
+
+        23% {
+          opacity: 1;
+        }
+
+        30% {
+          opacity: 0;
+          transform: scale(1);
+        }
+
+        100% {
+          opacity: 0;
+          transform: scale(1);
+        }
+      }
+
+      /* ==========================================
+         GLOBE ORBITS
+         ========================================== */
+
+      @keyframes advLuxOrbit {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes advLuxOrbitReverse {
+        from {
+          transform: rotate(360deg);
+        }
+
+        to {
+          transform: rotate(0deg);
+        }
+      }
+
+      .adv-luxury-home-hero .adv-lux-orbit {
+        animation: advLuxOrbit 58s linear infinite;
+      }
+
+      .adv-luxury-home-hero .adv-lux-orbit-reverse {
+        animation: advLuxOrbitReverse 74s linear infinite;
+      }
+
+      /* ==========================================
+         FLOATING GLASS ELEMENTS
+         ========================================== */
+
+      @keyframes advLuxFloat {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0);
+        }
+
+        50% {
+          transform: translate3d(0, -6px, 0);
+        }
+      }
+
+      @keyframes advLuxFloatReverse {
+        0%,
+        100% {
+          transform: translate3d(0, -3px, 0);
+        }
+
+        50% {
+          transform: translate3d(0, 5px, 0);
+        }
+      }
+
+      .adv-luxury-home-hero .adv-lux-float {
+        animation: advLuxFloat 6.5s ease-in-out infinite;
+      }
+
+      .adv-luxury-home-hero .adv-lux-float-reverse {
+        animation: advLuxFloatReverse 7.5s ease-in-out infinite;
+      }
+
+      /* ==========================================
+         PULSE
+         ========================================== */
+
+      @keyframes advLuxPulse {
+        0%,
+        100% {
+          opacity: 0.45;
+          box-shadow: 0 0 0 0 rgba(255,179,0,0);
+        }
+
+        50% {
+          opacity: 1;
+          box-shadow: 0 0 0 5px rgba(255,179,0,0.10);
+        }
+      }
+
+      .adv-luxury-home-hero .adv-lux-pulse {
+        animation: advLuxPulse 2.8s ease-in-out infinite;
+      }
+
+      /* ==========================================
+         AMBIENT LIGHT
+         ========================================== */
+
+      @keyframes advLuxAmbient {
+        0%,
+        100% {
+          opacity: 0.45;
+        }
+
+        50% {
+          opacity: 0.78;
+        }
+      }
+
+      .adv-luxury-home-hero .adv-lux-ambient {
+        animation: advLuxAmbient 10s ease-in-out infinite;
+      }
+
+      /* ==========================================
+         CTA LIGHT SWEEP
+         ========================================== */
+
+      @keyframes advLuxSweep {
+        0% {
+          transform: translateX(-180%);
+        }
+
+        45%,
+        100% {
+          transform: translateX(560%);
+        }
+      }
+
+      .adv-luxury-home-hero .adv-lux-sweep {
+        animation: advLuxSweep 6s ease-in-out infinite;
+      }
+
+      /* ==========================================
+         REDUCED MOTION
+         ========================================== */
+
+      @media (prefers-reduced-motion: reduce) {
+        .adv-luxury-home-hero .adv-lux-bg,
+        .adv-luxury-home-hero .adv-lux-orbit,
+        .adv-luxury-home-hero .adv-lux-orbit-reverse,
+        .adv-luxury-home-hero .adv-lux-float,
+        .adv-luxury-home-hero .adv-lux-float-reverse,
+        .adv-luxury-home-hero .adv-lux-pulse,
+        .adv-luxury-home-hero .adv-lux-ambient,
+        .adv-luxury-home-hero .adv-lux-sweep {
+          animation: none !important;
+        }
+
+        .adv-luxury-home-hero .adv-lux-bg-1 {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+
+        .adv-luxury-home-hero .adv-lux-bg-2,
+        .adv-luxury-home-hero .adv-lux-bg-3,
+        .adv-luxury-home-hero .adv-lux-bg-4 {
+          opacity: 0 !important;
+        }
+      }
+    `}
+  </style>
+
+  {/* ============================================
+      CINEMATIC BACKGROUND SLIDER
+      ============================================ */}
+
+  <div
+    aria-hidden="true"
+    className="
+      pointer-events-none
+      absolute
+      inset-0
+      z-0
+      overflow-hidden
+    "
+  >
+    <img
+      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1920&q=84"
+      alt=""
+      loading="eager"
+      decoding="async"
+      className="adv-lux-bg adv-lux-bg-1"
+    />
+
+    <img
+      src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1920&q=82"
+      alt=""
+      loading="lazy"
+      decoding="async"
+      className="adv-lux-bg adv-lux-bg-2"
+    />
+
+    <img
+      src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1920&q=82"
+      alt=""
+      loading="lazy"
+      decoding="async"
+      className="adv-lux-bg adv-lux-bg-3"
+    />
+
+    <img
+      src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1920&q=82"
+      alt=""
+      loading="lazy"
+      decoding="async"
+      className="adv-lux-bg adv-lux-bg-4"
+    />
+
+    {/* Main dark treatment */}
+
+    <div className="absolute inset-0 bg-[#03040d]/60" />
+
+    <div
+      className="
+        absolute
+        inset-0
+      "
+      style={{
+        background:
+          "linear-gradient(90deg, rgba(3,4,13,0.94) 0%, rgba(3,4,13,0.83) 31%, rgba(3,4,13,0.49) 59%, rgba(3,4,13,0.66) 100%)",
+      }}
+    />
+
+    <div
+      className="absolute inset-0"
+      style={{
+        background:
+          "linear-gradient(180deg, rgba(3,4,13,0.18) 0%, rgba(3,4,13,0.04) 42%, rgba(3,4,13,0.89) 100%)",
+      }}
+    />
+
+    {/* Navy atmosphere */}
+
+    <div
+      className="
+        adv-lux-ambient
+        absolute
+        -left-[18%]
+        top-[10%]
+        h-[580px]
+        w-[580px]
+        rounded-full
+        bg-[#0000aa]/20
+        blur-[170px]
+      "
+    />
+
+    {/* Amber atmosphere */}
+
+    <div
+      className="
+        adv-lux-ambient
+        absolute
+        -right-[14%]
+        bottom-[-16%]
+        h-[570px]
+        w-[570px]
+        rounded-full
+        bg-[#ffb300]/15
+        blur-[175px]
+      "
+    />
+
+    {/* Subtle center illumination */}
+
+    <div
+      className="absolute inset-0"
+      style={{
+        background:
+          "radial-gradient(circle at 60% 18%, rgba(255,255,255,0.095), transparent 40%)",
+      }}
+    />
+
+    {/* Technical grid */}
+
+    <div
+      className="
+        absolute
+        inset-0
+        opacity-[0.035]
+      "
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(255,255,255,0.10) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.10) 1px, transparent 1px)",
+        backgroundSize: "78px 78px",
+        maskImage:
+          "linear-gradient(to bottom, transparent, black 14%, black 88%, transparent)",
+        WebkitMaskImage:
+          "linear-gradient(to bottom, transparent, black 14%, black 88%, transparent)",
+      }}
+    />
+
+    {/* Luxury vignette */}
+
+    <div
+      className="absolute inset-0"
+      style={{
+        background:
+          "radial-gradient(circle at center, transparent 28%, rgba(0,0,0,0.24) 100%)",
+      }}
+    />
+  </div>
+
+  {/* ============================================
+      TOP BRAND ACCENT
+      ============================================ */}
+
+  <motion.div
+    aria-hidden="true"
+    className="
+      absolute
+      left-0
+      top-0
+      z-40
+      h-[2px]
+      bg-[linear-gradient(90deg,#0000aa_0%,#3346ff_52%,#ffb300_100%)]
+    "
+    initial={{
+      width: 0,
+    }}
+    animate={{
+      width: "100%",
+    }}
+    transition={{
+      duration: 1.15,
+      ease: [0.22, 1, 0.36, 1],
+    }}
+  />
+
+  {/* ============================================
+      MAIN HERO
+      ============================================ */}
+
+  <div
+    className="
+      relative
+      z-10
+      flex
+      min-h-[calc(100svh-72px)]
+      w-full
+      items-center
+      py-7
+      sm:py-9
+      lg:py-10
+    "
+  >
+    <div
+      className="
+        mx-auto
+        w-full
+        max-w-[1440px]
+        px-4
+        sm:px-6
+        lg:px-8
+        xl:px-10
+      "
+    >
+      {/* ============================================
+          TOP META BAR
+          ============================================ */}
+
+      <motion.div
+        className="
+          mb-3
+          hidden
+          items-center
+          justify-between
+          border-b
+          border-white/[0.12]
+          pb-3
+          lg:flex
+        "
+        initial={{
+          opacity: 0,
+          y: -10,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 0.6,
+          delay: 0.1,
+        }}
+      >
+        <div className="flex items-center gap-3">
+          <span
+            className="
+              text-[9px]
+              font-black
+              uppercase
+              tracking-[0.20em]
+              text-[#ffb300]
+            "
+          >
+            AdvantEdge
+          </span>
+
+          <span className="h-3 w-px bg-white/20" />
+
+          <span
+            className="
+              text-[9px]
+              font-medium
+              uppercase
+              tracking-[0.16em]
+              text-white/50
+            "
+          >
+            Strategy • Execution • Intelligence • Growth
+          </span>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <span
+            className="
+              adv-lux-pulse
+              h-1.5
+              w-1.5
+              rounded-full
+              bg-[#ffb300]
+            "
+          />
+
+          <span
+            className="
+              text-[9px]
+              font-semibold
+              uppercase
+              tracking-[0.14em]
+              text-white/50
+            "
+          >
+            Growth Systems Active
+          </span>
+        </div>
+      </motion.div>
+
+      {/* ============================================
+          ONE SINGLE BLACK GLASS HERO SURFACE
+          ============================================ */}
+
+      <motion.div
+        className="
+          relative
+          min-h-[650px]
+          overflow-hidden
+          rounded-[30px]
+          border
+          border-white/[0.16]
+          bg-black/[0.28]
+          shadow-[0_40px_130px_rgba(0,0,0,0.48)]
+          backdrop-blur-[28px]
+          lg:min-h-[610px]
+        "
+        initial={{
+          opacity: 0,
+          y: 20,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 0.82,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+      >
+        {/* ============================================
+            GLASS EDGE
+            ============================================ */}
+
+        <div
+          className="
+            pointer-events-none
+            absolute
+            left-[5%]
+            right-[5%]
+            top-0
+            z-40
+            h-px
+          "
+          style={{
+            background:
+              "linear-gradient(90deg, transparent, rgba(255,255,255,0.58), transparent)",
+          }}
+        />
+
+        {/* Top accent */}
+
+        <div
+          className="
+            absolute
+            left-0
+            top-0
+            z-40
+            h-[2px]
+            w-full
+            bg-[linear-gradient(90deg,#0000aa_0%,#3346ff_48%,#ffb300_100%)]
+          "
+        />
+
+        {/* Glass reflection */}
+
+        <div
+          className="
+            pointer-events-none
+            absolute
+            -left-[17%]
+            -top-[60%]
+            h-[680px]
+            w-[780px]
+            rounded-full
+            bg-white/[0.055]
+            blur-[170px]
+          "
+        />
+
+        {/* ============================================
+            LARGE INTEGRATED PARTICLE GLOBE
+            NO SEPARATE CARD
+            ============================================ */}
+
+        <div
+          className="
+            pointer-events-none
+            absolute
+            -right-[145px]
+            top-[34px]
+            z-[4]
+            h-[560px]
+            w-[650px]
+            sm:-right-[95px]
+            lg:-right-[40px]
+            lg:top-[20px]
+            lg:h-[590px]
+            lg:w-[700px]
+            xl:right-[0px]
+          "
+        >
+          {/* Globe atmospheric light */}
+
+          <div
+            className="
+              adv-lux-ambient
+              absolute
+              left-1/2
+              top-1/2
+              h-[390px]
+              w-[390px]
+              -translate-x-1/2
+              -translate-y-1/2
+              rounded-full
+              bg-[radial-gradient(circle,rgba(0,0,170,0.30)_0%,rgba(0,1,49,0.18)_48%,transparent_73%)]
+              blur-[100px]
+            "
+          />
+
+          {/* Static circle */}
+
+          <div
+            className="
+              absolute
+              left-1/2
+              top-1/2
+              h-[300px]
+              w-[300px]
+              -translate-x-1/2
+              -translate-y-1/2
+              rounded-full
+              border
+              border-white/[0.10]
+              sm:h-[385px]
+              sm:w-[385px]
+              lg:h-[430px]
+              lg:w-[430px]
+            "
+          />
+
+          {/* Inner circle */}
+
+          <div
+            className="
+              absolute
+              left-1/2
+              top-1/2
+              h-[250px]
+              w-[250px]
+              -translate-x-1/2
+              -translate-y-1/2
+              rounded-full
+              border
+              border-white/[0.055]
+              sm:h-[325px]
+              sm:w-[325px]
+              lg:h-[365px]
+              lg:w-[365px]
+            "
+          />
+
+          {/* ============================================
+              OUTER ORBIT
+              Correct transform separation
+              ============================================ */}
+
+          <div
+            className="
+              absolute
+              left-1/2
+              top-1/2
+              h-[330px]
+              w-[330px]
+              -translate-x-1/2
+              -translate-y-1/2
+              sm:h-[415px]
+              sm:w-[415px]
+              lg:h-[465px]
+              lg:w-[465px]
+            "
+          >
+            <div
+              className="
+                adv-lux-orbit
+                relative
+                h-full
+                w-full
+                rounded-full
+                border
+                border-white/[0.12]
+              "
+            >
+              <span
+                className="
+                  absolute
+                  left-1/2
+                  top-[-4px]
+                  h-2
+                  w-2
+                  -translate-x-1/2
+                  rounded-full
+                  bg-[#ffb300]
+                  shadow-[0_0_20px_#ffb300]
+                "
+              />
+            </div>
+          </div>
+
+          {/* ============================================
+              ELLIPTICAL ORBIT
+              ============================================ */}
+
+          <div
+            className="
+              absolute
+              left-1/2
+              top-1/2
+              h-[245px]
+              w-[365px]
+              -translate-x-1/2
+              -translate-y-1/2
+              sm:h-[315px]
+              sm:w-[470px]
+              lg:h-[350px]
+              lg:w-[530px]
+            "
+          >
+            <div
+              className="
+                adv-lux-orbit-reverse
+                h-full
+                w-full
+                rounded-[50%]
+                border
+                border-white/[0.065]
+              "
+            />
+          </div>
+
+          {/* Horizontal axis */}
+
+          <div
+            className="
+              absolute
+              left-[9%]
+              right-[9%]
+              top-1/2
+              h-px
+              bg-gradient-to-r
+              from-transparent
+              via-white/[0.10]
+              to-transparent
+            "
+          />
+
+          {/* Vertical axis */}
+
+          <div
+            className="
+              absolute
+              bottom-[10%]
+              left-1/2
+              top-[10%]
+              w-px
+              bg-gradient-to-b
+              from-transparent
+              via-white/[0.075]
+              to-transparent
+            "
+          />
+
+          {/* ============================================
+              EXACT EXISTING PARTICLE GLOBE
+              ============================================ */}
+
+          <div
+            className="
+              absolute
+              inset-0
+              z-20
+              flex
+              items-center
+              justify-center
+              overflow-hidden
+            "
+          >
+            <div
+              className="
+                origin-center
+                scale-[0.52]
+                sm:scale-[0.72]
+                lg:scale-[0.86]
+                xl:scale-[0.90]
+              "
+            >
+              <ParticleGlobe
+                width={450}
+                height={450}
+                particleCount={1200}
+                rotationSpeed={0.0015}
+                radius={160}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* ============================================
+            CONTENT READABILITY GRADIENT
+            THIS IS NOT A CARD
+            ============================================ */}
+
+        <div
+          aria-hidden="true"
+          className="
+            pointer-events-none
+            absolute
+            inset-y-0
+            left-0
+            z-[5]
+            w-full
+            lg:w-[72%]
+          "
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(3,4,13,0.78) 0%, rgba(3,4,13,0.57) 55%, rgba(3,4,13,0.12) 85%, transparent 100%)",
+          }}
+        />
+
+        {/* Soft frosted haze */}
+
+        <div
+          aria-hidden="true"
+          className="
+            pointer-events-none
+            absolute
+            -left-[12%]
+            top-[5%]
+            z-[5]
+            h-[520px]
+            w-[650px]
+            rounded-full
+            bg-black/[0.22]
+            blur-[110px]
+          "
+        />
+
+        {/* ============================================
+            GLOBE STATUS
+            ============================================ */}
+
+        <motion.div
+          className="
+            absolute
+            right-6
+            top-6
+            z-30
+            hidden
+            items-center
+            gap-3
+            lg:flex
+          "
+          initial={{
+            opacity: 0,
+            y: -8,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            delay: 0.38,
+            duration: 0.6,
+          }}
+        >
+          <div className="text-right">
+            <p
+              className="
+                text-[8px]
+                font-bold
+                uppercase
+                tracking-[0.16em]
+                text-[#ffb300]
+              "
+            >
+              Global Growth Infrastructure
+            </p>
+
+            <p className="mt-0.5 text-[8px] text-white/40">
+              Intelligent execution network
+            </p>
+          </div>
+
+          <div
+            className="
+              flex
+              items-center
+              gap-2
+              rounded-full
+              border
+              border-white/[0.14]
+              bg-black/[0.22]
+              px-3
+              py-1.5
+              backdrop-blur-2xl
+            "
+          >
+            <span
+              className="
+                adv-lux-pulse
+                h-1.5
+                w-1.5
+                rounded-full
+                bg-[#ffb300]
+              "
+            />
+
+            <span
+              className="
+                text-[8px]
+                font-bold
+                uppercase
+                tracking-[0.10em]
+                text-white/65
+              "
+            >
+              Live
+            </span>
+          </div>
+        </motion.div>
+
+        {/* ============================================
+            MAIN CONTENT
+            ============================================ */}
+
+        <motion.div
+          className="
+            relative
+            z-30
+            max-w-[670px]
+            px-5
+            pb-[360px]
+            pt-8
+            sm:px-7
+            sm:pb-[420px]
+            lg:px-10
+            lg:pb-[120px]
+            lg:pt-16
+            xl:px-12
+            xl:pt-20
+          "
+          initial={{
+            opacity: 0,
+            x: -30,
+          }}
+          animate={{
+            opacity: 1,
+            x: 0,
+          }}
+          transition={{
+            duration: 0.8,
+            delay: 0.08,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+        >
+          {/* ============================================
+              EYEBROW
+              ============================================ */}
+
+          <motion.div
+            className="mb-4"
+            initial={{
+              opacity: 0,
+              y: 14,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: 0.17,
+              duration: 0.55,
+            }}
+          >
+            <span
+              className="
+                inline-flex
+                items-center
+                rounded-full
+                border
+                border-white/[0.16]
+                bg-white/[0.055]
+                px-3
+                py-1.5
+                shadow-[inset_0_1px_0_rgba(255,255,255,0.13),0_12px_32px_rgba(0,0,0,0.15)]
+                backdrop-blur-2xl
+              "
+            >
+              <Sparkles
+                className="
+                  mr-2
+                  h-3.5
+                  w-3.5
+                  text-[#ffb300]
+                "
+              />
+
+              <span
+                className="
+                  text-[10px]
+                  font-bold
+                  tracking-[0.04em]
+                  text-white/90
+                  sm:text-[11px]
+                "
+              >
+                Strategic Growth Partner
+              </span>
+            </span>
+          </motion.div>
+
+          {/* ============================================
+              SMALLER PROFESSIONAL HEADING
+              ============================================ */}
+
+          <motion.h1
+            id="home-hero-title"
+            className="
+              max-w-[620px]
+              text-[1.75rem]
+              font-semibold
+              leading-[1.08]
+              tracking-[-0.035em]
+              text-white
+              sm:text-[2rem]
+              lg:text-[2.2rem]
+              xl:text-[2.35rem]
+            "
+            initial={{
+              opacity: 0,
+              y: 16,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: 0.23,
+              duration: 0.62,
+            }}
+          >
+            Strategic Marketing.{" "}
+
+            <span className="relative inline-block">
+              <span className="relative z-10">
+                Integrated Execution.
+              </span>
+
+              <motion.span
+                aria-hidden="true"
+                className="
+                  absolute
+                  bottom-[0.06em]
+                  left-0
+                  z-0
+                  h-[0.14em]
+                  rounded-full
+                  bg-[#ffb300]/45
+                "
+                initial={{
+                  width: 0,
+                }}
+                animate={{
+                  width: "100%",
+                }}
+                transition={{
+                  delay: 0.62,
+                  duration: 0.55,
+                }}
+              />
+            </span>
+
+            <br />
+
+            <span className="text-white/92">
+              AI-Powered Growth.
+            </span>
+          </motion.h1>
+
+          {/* ============================================
+              SUPPORTING COPY
+              ============================================ */}
+
+          <motion.div
+            className="
+              mt-4
+              space-y-2
+            "
+            initial={{
+              opacity: 0,
+              y: 14,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: 0.31,
+              duration: 0.6,
+            }}
+          >
+            <p
+              className="
+                text-[13px]
+                font-semibold
+                leading-snug
+                text-white/88
+                sm:text-sm
+              "
+            >
+              Growth is not accidental. It is engineered.
+            </p>
+
+            <p
+              className="
+                max-w-[570px]
+                text-[12px]
+                leading-[1.72]
+                text-white/55
+                sm:text-[13px]
+              "
+            >
+              We build revenue-driven marketing systems that connect
+              strategy, execution, and AI - so every effort drives
+              measurable growth.
+            </p>
+          </motion.div>
+
+          {/* ============================================
+              CTA
+              ============================================ */}
+
+          <motion.div
+            className="
+              mt-5
+              flex
+              flex-col
+              gap-3
+              sm:flex-row
+              sm:flex-wrap
+            "
+            initial={{
+              opacity: 0,
+              y: 14,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: 0.38,
+              duration: 0.6,
+            }}
+          >
+            {/* Primary */}
+
+            <motion.div
+              whileHover={{
+                y: -2,
+              }}
+              whileTap={{
+                scale: 0.985,
+              }}
+            >
+              <Link
+                to="/contact"
+                className="
+                  group
+                  relative
+                  inline-flex
+                  min-h-11
+                  w-full
+                  items-center
+                  justify-center
+                  overflow-hidden
+                  rounded-xl
+                  bg-[linear-gradient(135deg,#0000aa_0%,#182bdc_60%,#3346ff_100%)]
+                  px-5
+                  py-2.5
+                  text-center
+                  text-[12px]
+                  font-bold
+                  text-white
+                  shadow-[0_16px_38px_rgba(0,0,170,0.28)]
+                  transition-shadow
+                  duration-300
+                  hover:shadow-[0_20px_48px_rgba(0,0,170,0.38)]
+                  sm:w-auto
+                  sm:px-6
+                  sm:text-[13px]
+                "
+              >
+                <span
+                  aria-hidden="true"
+                  className="
+                    adv-lux-sweep
+                    absolute
+                    inset-y-0
+                    left-[-35%]
+                    w-[18%]
+                    -skew-x-[20deg]
+                    bg-white/[0.12]
+                  "
+                />
+
+                <span className="relative z-10">
+                  Book a 30-Minute Revenue Strategy Call
+                </span>
+
+                <ArrowRight
+                  className="
+                    relative
+                    z-10
+                    ml-2
+                    h-4
+                    w-4
+                    shrink-0
+                    transition-transform
+                    duration-300
+                    group-hover:translate-x-1
+                  "
+                />
+              </Link>
+            </motion.div>
+
+            {/* Secondary */}
+
+            <motion.div
+              whileHover={{
+                y: -2,
+              }}
+              whileTap={{
+                scale: 0.985,
+              }}
+            >
+              <Link
+                to="/services"
+                className="
+                  inline-flex
+                  min-h-11
+                  w-full
+                  items-center
+                  justify-center
+                  rounded-xl
+                  border
+                  border-white/[0.20]
+                  bg-white/[0.055]
+                  px-5
+                  py-2.5
+                  text-[12px]
+                  font-bold
+                  text-white/90
+                  shadow-[inset_0_1px_0_rgba(255,255,255,0.10),0_10px_30px_rgba(0,0,0,0.12)]
+                  backdrop-blur-xl
+                  transition-all
+                  duration-300
+                  hover:border-white/[0.32]
+                  hover:bg-white/[0.10]
+                  hover:text-white
+                  sm:w-auto
+                  sm:px-6
+                  sm:text-[13px]
+                "
+              >
+                Explore Services
+              </Link>
+            </motion.div>
+          </motion.div>
+
+          {/* ============================================
+              DARK GLASS METRICS
+              ============================================ */}
+
+          <motion.div
+            className="
+              mt-5
+              max-w-[560px]
+              overflow-hidden
+              rounded-2xl
+              border
+              border-white/[0.12]
+              bg-black/[0.20]
+              shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_14px_40px_rgba(0,0,0,0.16)]
+              backdrop-blur-2xl
+            "
+            initial={{
+              opacity: 0,
+              y: 12,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: 0.45,
+              duration: 0.58,
+            }}
+          >
+            <div
+              className="
+                grid
+                grid-cols-3
+                divide-x
+                divide-white/[0.10]
+              "
+            >
+              {[
+                {
+                  value: "350+",
+                  label: "Clients",
+                },
+                {
+                  value: "94%",
+                  label: "Satisfaction",
+                },
+                {
+                  value: "4.1x",
+                  label: "ROI",
+                },
+              ].map((metric) => (
+                <motion.div
+                  key={metric.label}
+                  className="
+                    min-w-0
+                    px-3
+                    py-3
+                    sm:px-4
+                  "
+                  whileHover={{
+                    backgroundColor:
+                      "rgba(255,255,255,0.045)",
+                  }}
+                  transition={{
+                    duration: 0.25,
+                  }}
+                >
+                  <p
+                    className="
+                      truncate
+                      text-lg
+                      font-bold
+                      tracking-[-0.03em]
+                      text-white
+                      sm:text-xl
+                    "
+                  >
+                    {metric.value}
+                  </p>
+
+                  <p
+                    className="
+                      mt-0.5
+                      truncate
+                      text-[9px]
+                      font-medium
+                      text-white/40
+                      sm:text-[10px]
+                    "
+                  >
+                    {metric.label}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* ============================================
+              PROCESS PATH
+              ============================================ */}
+
+          <motion.div
+            className="
+              mt-4
+              flex
+              flex-wrap
+              items-center
+              gap-x-2
+              gap-y-1.5
+              text-[9px]
+              font-semibold
+              text-white/38
+            "
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              delay: 0.58,
+              duration: 0.6,
+            }}
+          >
+            <span>Strategy</span>
+
+            <ArrowRight className="h-3 w-3 text-white/18" />
+
+            <span>Execution</span>
+
+            <ArrowRight className="h-3 w-3 text-white/18" />
+
+            <span>AI</span>
+
+            <ArrowRight className="h-3 w-3 text-white/18" />
+
+            <span className="text-white/75">
+              Measurable Growth
+            </span>
+          </motion.div>
+        </motion.div>
+
+        {/* ============================================
+            FLOATING INTELLIGENCE CARD
+            SAME HERO — NOT A SECOND COLUMN
+            ============================================ */}
+
+        <div
+          className="
+            adv-lux-float
+            absolute
+            right-[5%]
+            top-[29%]
+            z-30
+            hidden
+            min-w-[150px]
+            rounded-2xl
+            border
+            border-white/[0.14]
+            bg-black/[0.24]
+            px-3.5
+            py-3
+            shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_18px_45px_rgba(0,0,0,0.20)]
+            backdrop-blur-2xl
+            lg:block
+          "
+        >
+          <p
+            className="
+              text-[7px]
+              font-bold
+              uppercase
+              tracking-[0.14em]
+              text-white/35
+            "
+          >
+            Intelligence
+          </p>
+
+          <div className="mt-1.5 flex items-center gap-2">
+            <span
+              className="
+                adv-lux-pulse
+                h-1.5
+                w-1.5
+                rounded-full
+                bg-[#ffb300]
+              "
+            />
+
+            <span
+              className="
+                text-[9px]
+                font-bold
+                text-white/90
+              "
+            >
+              AI Execution Layer
+            </span>
+          </div>
+
+          <p
+            className="
+              mt-1
+              text-[7px]
+              text-white/35
+            "
+          >
+            Continuous optimization
+          </p>
+        </div>
+
+        {/* ============================================
+            PERFORMANCE CARD
+            ============================================ */}
+
+        <div
+          className="
+            adv-lux-float-reverse
+            absolute
+            bottom-[26%]
+            right-[34%]
+            z-30
+            hidden
+            rounded-2xl
+            border
+            border-white/[0.14]
+            bg-black/[0.24]
+            px-3.5
+            py-3
+            shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_18px_45px_rgba(0,0,0,0.20)]
+            backdrop-blur-2xl
+            xl:block
+          "
+        >
+          <p
+            className="
+              text-[7px]
+              font-bold
+              uppercase
+              tracking-[0.14em]
+              text-white/35
+            "
+          >
+            Performance
+          </p>
+
+          <div className="mt-1 flex items-baseline gap-1">
+            <span
+              className="
+                text-xl
+                font-black
+                tracking-[-0.04em]
+                text-[#ffb300]
+              "
+            >
+              4.1x
+            </span>
+
+            <span
+              className="
+                text-[8px]
+                font-semibold
+                text-white/40
+              "
+            >
+              ROI
+            </span>
+          </div>
+
+          <p
+            className="
+              mt-1
+              text-[7px]
+              text-white/35
+            "
+          >
+            Average growth performance
+          </p>
+        </div>
+
+        {/* ============================================
+            INTEGRATED CAPABILITY RAIL
+            PART OF THE SAME HERO
+            ============================================ */}
+
+        <motion.div
+          className="
+            absolute
+            bottom-0
+            left-0
+            right-0
+            z-40
+            hidden
+            border-t
+            border-white/[0.11]
+            bg-black/[0.18]
+            backdrop-blur-2xl
+            lg:block
+          "
+          initial={{
+            opacity: 0,
+            y: 14,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            delay: 0.48,
+            duration: 0.7,
+          }}
+        >
+          <div className="grid grid-cols-4">
+            {[
+              {
+                number: "01",
+                title: "Strategic Marketing",
+                text: "Commercial strategy aligned to growth.",
+              },
+              {
+                number: "02",
+                title: "Integrated Execution",
+                text: "Channels operating as one connected system.",
+              },
+              {
+                number: "03",
+                title: "AI & Automation",
+                text: "Intelligence improving speed and precision.",
+              },
+              {
+                number: "04",
+                title: "Revenue Growth",
+                text: "Performance linked to business outcomes.",
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={item.number}
+                className={[
+                  "group relative px-5 py-3.5",
+                  index > 0
+                    ? "border-l border-white/[0.10]"
+                    : "",
+                ].join(" ")}
+                whileHover={{
+                  backgroundColor:
+                    "rgba(255,255,255,0.045)",
+                }}
+                transition={{
+                  duration: 0.25,
+                }}
+              >
+                <div className="flex items-start gap-3">
+                  <span
+                    className="
+                      mt-0.5
+                      shrink-0
+                      text-[8px]
+                      font-black
+                      tracking-[0.15em]
+                      text-[#ffb300]
+                    "
+                  >
+                    {item.number}
+                  </span>
+
+                  <div className="min-w-0">
+                    <p
+                      className="
+                        text-[10px]
+                        font-bold
+                        text-white/88
+                      "
+                    >
+                      {item.title}
+                    </p>
+
+                    <p
+                      className="
+                        mt-1
+                        text-[8px]
+                        leading-[1.5]
+                        text-white/35
+                      "
+                    >
+                      {item.text}
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  className="
+                    absolute
+                    bottom-0
+                    left-0
+                    h-[2px]
+                    w-full
+                    origin-left
+                    scale-x-0
+                    bg-[linear-gradient(90deg,#0000aa,#ffb300)]
+                    transition-transform
+                    duration-500
+                    group-hover:scale-x-100
+                  "
+                />
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* ============================================
+            MOBILE CAPABILITY SYSTEM
+            ============================================ */}
+
+        <div
+          className="
+            relative
+            z-40
+            mx-4
+            mb-4
+            overflow-hidden
+            rounded-2xl
+            border
+            border-white/[0.11]
+            bg-black/[0.18]
+            backdrop-blur-xl
+            lg:hidden
+          "
+        >
+          <div className="grid grid-cols-2">
+            {[
+              "Strategy",
+              "Execution",
+              "AI & Automation",
+              "Revenue Growth",
+            ].map((item, index) => (
+              <div
+                key={item}
+                className={[
+                  "px-3 py-3",
+
+                  index % 2 !== 0
+                    ? "border-l border-white/[0.09]"
+                    : "",
+
+                  index > 1
+                    ? "border-t border-white/[0.09]"
+                    : "",
+                ].join(" ")}
+              >
+                <p
+                  className="
+                    text-[9px]
+                    font-semibold
+                    text-white/55
+                  "
+                >
+                  {item}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+
+      {/* ============================================
+          SLIDER PROGRESS
+          ============================================ */}
+
+      <div
+        aria-hidden="true"
+        className="
+          mt-3
+          hidden
+          items-center
+          justify-center
+          gap-2
+          sm:flex
+        "
+      >
+        {[0, 1, 2, 3].map((item) => (
+          <span
+            key={item}
+            className="
+              relative
+              h-[3px]
+              w-8
+              overflow-hidden
+              rounded-full
+              bg-white/[0.13]
+            "
+          >
+            <motion.span
+              className="
+                block
+                h-full
+                w-full
+                origin-left
+                bg-[linear-gradient(90deg,#0000aa,#ffb300)]
+              "
+              animate={{
+                scaleX: [0, 1, 1, 0],
+                opacity: [0.2, 1, 1, 0.2],
+              }}
+              transition={{
+                duration: 8,
+                delay: item * 8,
+                repeat: Infinity,
+                repeatDelay: 24,
+                ease: "linear",
+              }}
+            />
+          </span>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  {/* ============================================
+      BOTTOM TRANSITION
+      ============================================ */}
+
+  <div
+    aria-hidden="true"
+    className="
+      pointer-events-none
+      absolute
+      bottom-0
+      left-0
+      right-0
+      z-[2]
+      h-20
+      bg-gradient-to-b
+      from-transparent
+      to-[#050611]/90
+    "
+  />
+</section>
+
+
+
+
+
+      
+
+
+
+
 
       
       {/* ============================================
